@@ -46,8 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Asset Store\Effect\SimpleParticlePack\Scripts\ParticleTester.cs" />
      <Compile Include="Assets\MyFolder 1\Script\Bullet.cs" />
+     <Compile Include="Assets\MyFolder 1\Script\EnemyControl.cs" />
      <Compile Include="Assets\MyFolder 1\Script\MovePlane.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
