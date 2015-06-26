@@ -46,8 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Aseets\SimpleParticlePack\Scripts\ParticleTester.cs" />
      <Compile Include="Assets\Aseets\omega_fighter_01\script\MouseLook.cs" />
-     <Compile Include="Assets\MyFolder\Script\ShipControl.cs" />
+     <Compile Include="Assets\MyFolder\Script\Bullet.cs" />
+     <Compile Include="Assets\MyFolder\Script\EnemyControl.cs" />
+     <Compile Include="Assets\MyFolder\Script\PlayerControl.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
