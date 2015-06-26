@@ -11,6 +11,6 @@ public class Bullet : MonoBehaviour {
 	}
 
 	void Update () {
-		transform.Translate (0, 0, bulletSpeed);//go z direction: speed = bulletSpeed 
+		transform.Translate (transform.forward * bulletSpeed);//go z direction: speed = bulletSpeed 
 	}
 }
