@@ -5,13 +5,12 @@ public class EnemyControl : MonoBehaviour {
 
     public GameObject EnemyBullet;
     public GameObject Explosion;
+	public int Score = 0;
     float Z_Speed = 0.7f;
     float intervalTime;
 
-
 	// Use this for initialization
 	void Start () {
-
         intervalTime = 0;
 	}
 	
@@ -23,20 +22,18 @@ public class EnemyControl : MonoBehaviour {
         Quaternion quat = Quaternion.Euler(0, 180, 0);
 
         intervalTime += Time.deltaTime;
-        if (intervalTime >= 2) {
+        if (intervalTime >= 1.5f) {
             intervalTime = 0.0f;
             Instantiate(EnemyBullet, new Vector3(transform.position.x, transform.position.y, transform.position.z), quat);
         }
 	
 	}
 
-
-
-	void OnTriggerEnter(Collider coll) { //Attack judge 
-        if (coll.gameObject.tag == "PlayerBullet") {//which object touch
+    void OnTriggerEnter(Collider coll) {
+        if (coll.gameObject.tag == "PlayerBullet") {
             Instantiate(Explosion, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
 			Destroy(this.gameObject);
-
+			Score++;
         }
 
     }

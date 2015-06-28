@@ -3,13 +3,14 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour {
     
-    float bulletSpeed = 2;
+    float bulletSpeed = 1;
 	
-    void Start () {
-        Destroy(this.gameObject, 5);//deleate
+    // Use this for initialization
+	void Start () {
+        Destroy(this.gameObject, 5);
 	}
-
+	// Update is called once per frame
 	void Update () {
-        transform.Translate(0, 0, bulletSpeed);//bullet go to Z direction 2m/s 
+        transform.Translate(0, 0, bulletSpeed);
 	}
 }

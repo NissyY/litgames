@@ -15,9 +15,12 @@ public class CameraControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (GameObject.Find("SciFi_Fighter_AK5(Clone)") == true) {
-			Vector3 startVec = GameObject.Find("SciFi_Fighter_AK5(Clone)").transform.localPosition;
-			transform.localPosition = new Vector3(differenceX, startVec.y + difference.y, startVec.z + difference.z);
-		}
+        //if (GameObject.Find("Main Camera").GetComponent<GameControl>().gameFlag == true) {
+            if (GameObject.Find("SciFi_Fighter_AK5(Clone)") == true) {
+                Vector3 startVec = GameObject.Find("SciFi_Fighter_AK5(Clone)").transform.localPosition;
+                transform.localPosition = new Vector3(differenceX, startVec.y + difference.y, startVec.z + difference.z);
+            }
+        //}
+	
 	}
 }

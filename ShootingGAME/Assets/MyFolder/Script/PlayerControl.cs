@@ -4,6 +4,8 @@ using System.Collections;
 public class PlayerControl : MonoBehaviour {
 	float X_Speed = 0.1f;
 	float Y_Speed = 0.05f;
+	float speed = 0.2f;
+	float back = -0.1f;
 
 	public GameObject Prefab;
 	float intervalTime;
@@ -14,19 +16,24 @@ public class PlayerControl : MonoBehaviour {
 	
 	}
 	void Update () {
+		Debug.Log (transform.localEulerAngles);
+
 		float vertical = Input.GetAxis("Vertical");//-1~1 get value
 		float horizontal = Input.GetAxis("Horizontal");//-1~1 get value
 
-//		if (Input.GetKey("left")) {
-//			transform.Translate(horizontal * X_Speed, 0, 0);
-//			transform.Rotate(0, 0.3f, 0);
-//		}
-//		if(Input.GetKey("right")){
-//			transform.Translate(horizontal * X_Speed, 0, 0);
-//			transform.Rotate(0, -0.3f, 0);
-//		}
-		if(Input.GetKeyDown("left")){
-			transform.Rotate(0, -30, 0);
+		if(Input.GetKey("w")){
+			transform.Translate(transform.forward * speed);
+		}
+		if(Input.GetKey("x")){
+			transform.Translate(transform.forward * back);
+		}
+		if (Input.GetKey("left")) {
+			//transform.Translate(horizontal * X_Speed, 0, 0);
+			transform.Rotate(0, -0.3f, 0);
+		}
+		if(Input.GetKey("right")){
+			//transform.Translate(horizontal * X_Speed, 0, 0);
+			transform.Rotate(0, 0.3f, 0);
 		}
 		if(Input.GetKey("up")){
 			transform.Translate(0, vertical * Y_Speed, 0);

@@ -121,7 +121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyBullet: {fileID: 116170, guid: b41b072c8f6db5744867c34fd5e4678a, type: 2}
   Explosion: {fileID: 136278, guid: b45253cb4fb2f5e43b787e6579d3effd, type: 2}
-  sumscore: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
