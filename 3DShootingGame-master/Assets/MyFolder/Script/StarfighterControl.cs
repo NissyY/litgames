@@ -8,8 +8,8 @@ public class StarfighterControl : MonoBehaviour {
 	EnemyControl enemycontrol;
 
 
-    float X_Speed = 2;
-    float Z_Speed = 2;
+    float X_Speed = 1f;
+    float Z_Speed = 1f;
 
     public GameObject Prefab;
     public GameObject EnemyObject;
@@ -24,6 +24,7 @@ public class StarfighterControl : MonoBehaviour {
     void Start() {
         intervalTime = 0;
         enemyintervalTime = 0;
+
     }
 
     // Update is called once per frame
@@ -85,9 +86,11 @@ public class StarfighterControl : MonoBehaviour {
 
 	void OnTriggerEnter(Collider coll) {
         if (coll.gameObject.tag == "EnemyBullet") {
+
             Instantiate(Explosion, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
             Destroy(this.gameObject);
             GameObject.Find("Main Camera").GetComponent<GameControl>().gameFlag = false;
+
         }
     }
 

@@ -12,12 +12,13 @@ public class EnemyControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         intervalTime = 0;
+		transform.Rotate (0, 180, 0);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        transform.Translate(0, 0, -1 * Z_Speed);
+        transform.Translate(0, 0, 1 * Z_Speed);
 
         Quaternion quat = Quaternion.Euler(0, 180, 0);
 

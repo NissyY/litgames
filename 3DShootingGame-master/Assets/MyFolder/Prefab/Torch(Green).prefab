@@ -12,6 +12,7 @@ GameObject:
   - 199: {fileID: 19992660}
   - 114: {fileID: 11435390}
   - 65: {fileID: 6532578}
+  - 82: {fileID: 8219398}
   m_Layer: 0
   m_Name: Torch(Green)
   m_TagString: EnemyBullet
@@ -43,6 +44,75 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.32999992, z: 9.78999996}
   m_Center: {x: 0, y: 0, z: 3.23000002}
+--- !u!82 &8219398
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116170}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 94513247bb47a1a4a8d3ef9ce4b1da96, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!114 &11435390
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -51,7 +121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 116170}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b658a3669daafa449c1d4b87246ee9d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e37d42551c5745cd91a8f719924e5c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!198 &19855576
