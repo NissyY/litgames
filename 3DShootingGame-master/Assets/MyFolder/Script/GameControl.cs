@@ -7,27 +7,21 @@ public class GameControl : MonoBehaviour {
     public GameObject starFighterPrefab;
     public GameObject GameOverSet;
     public bool gameFlag;
-//{ get; set; }
-
-	// Use this for initialization
+	public int flg;
 	void Start () {
+		flg = 1;
         gameFlag = true;
-        
 	}
-	
-	// Update is called once per frame
 	void Update () {
-        if (gameFlag == false) {
-            GameOverSet.SetActive(true);   
-        }
+		if (gameFlag == false) {
+			GameOverSet.SetActive (true);   
+		}
 	}
-
     public void GameStartButton() {
-        Instantiate(starFighterPrefab);
+		//flg = 1;
+		Instantiate(starFighterPrefab); 
         GameStartBtn.SetActive(false);
-      
-    }
-
+	}
     public void GameOverButton() {
         Application.LoadLevel("GameScene01");
     }
