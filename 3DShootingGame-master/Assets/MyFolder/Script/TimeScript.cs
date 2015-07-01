@@ -7,8 +7,10 @@ public class TimeScript: MonoBehaviour {
 	public GameObject ResetButton;
 	public GameObject gameClearText;
 	public GameControl gamecontrol;
+	public int clearflg;
 	void Start () {
 
+		clearflg = 0;
 		//float型からint型へCastし、String型に変換して表示
 		GetComponent<Text>().text = ((int)time).ToString();
 		gameClearText.SetActive(false);
@@ -26,6 +28,7 @@ public class TimeScript: MonoBehaviour {
 		//マイナスは表示しない
 		if (time < 0)
 			time = 0;
+		clearflg = 1;
 		GetComponent<Text> ().text = ((int)time).ToString ();
 	}
 		IEnumerator GameClear() {
