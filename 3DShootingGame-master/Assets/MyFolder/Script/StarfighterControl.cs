@@ -15,16 +15,18 @@ public class StarfighterControl : MonoBehaviour {
     public GameObject EnemyObject;
     public GameObject Explosion;
 	public Text TimeLimit;
-
 	int scorevalue;
     float intervalTime;
     float enemyintervalTime;
-	
+
+
     void Start() {
         intervalTime = 0;
         enemyintervalTime = 0;
     }	
+
     void Update() {
+
         float vertical = Input.GetAxis("Vertical");
         float horizontal = Input.GetAxis("Horizontal");
         if (Input.GetKey("up")) {
@@ -63,6 +65,7 @@ public class StarfighterControl : MonoBehaviour {
             Instantiate(Explosion, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
             Destroy(this.gameObject);
 			GameObject.Find("Main Camera").GetComponent<GameControl>().gameFlag = false;
+			GameObject.Find("Main Camera").GetComponent<GameControl>().flg = 0;
         }
     }
 

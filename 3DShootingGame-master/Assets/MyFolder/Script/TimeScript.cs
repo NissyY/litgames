@@ -16,7 +16,7 @@ public class TimeScript: MonoBehaviour {
 	
 	void Update (){
 		//1秒に1ずつ減らしていく
-		if(gamecontrol.flg ==1){
+		if(GameObject.Find("Main Camera").GetComponent<GameControl>().flg==1){
 			time -= Time.deltaTime;
 		}
 		if (time < 0) {

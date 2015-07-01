@@ -9,18 +9,20 @@ public class GameControl : MonoBehaviour {
     public bool gameFlag;
 	public int flg;
 	void Start () {
-		flg = 1;
+		flg = 0;
         gameFlag = true;
 	}
 	void Update () {
 		if (gameFlag == false) {
 			GameOverSet.SetActive (true);   
 		}
+
 	}
     public void GameStartButton() {
-		//flg = 1;
+
 		Instantiate(starFighterPrefab); 
         GameStartBtn.SetActive(false);
+		flg = 1;
 	}
     public void GameOverButton() {
         Application.LoadLevel("GameScene01");
