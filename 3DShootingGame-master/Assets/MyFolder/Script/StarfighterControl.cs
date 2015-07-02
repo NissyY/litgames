@@ -58,6 +58,9 @@ public class StarfighterControl : MonoBehaviour {
             enemyintervalTime = 0;
             Instantiate(EnemyObject, new Vector3(Random.Range(100.0f, 200.0f), transform.position.y, transform.position.z + 200), Quaternion.identity);
         }
+		if(GameObject.Find("Time").GetComponent<TimeScript>().time==0){
+			Destroy(this.gameObject);
+		}
 
 }
 	void OnTriggerEnter(Collider coll) {

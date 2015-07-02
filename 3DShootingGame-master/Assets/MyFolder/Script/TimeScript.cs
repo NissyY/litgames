@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class TimeScript: MonoBehaviour {
-	private float time = 30;
+	public float time = 30;
 	public GameObject ResetButton;
 	public GameObject gameClearText;
 	public GameControl gamecontrol;

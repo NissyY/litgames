@@ -242,6 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745f542ef492d4230a97a7053503ab60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 30
   ResetButton: {fileID: 0}
   gameClearText: {fileID: 0}
   gamecontrol: {fileID: 0}

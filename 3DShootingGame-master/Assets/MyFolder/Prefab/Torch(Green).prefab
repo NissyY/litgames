@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11435390}
   - 65: {fileID: 6532578}
   - 82: {fileID: 8219398}
+  - 54: {fileID: 5470086}
   m_Layer: 0
   m_Name: Torch(Green)
   m_TagString: EnemyBullet
@@ -32,6 +33,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!54 &5470086
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116170}
+  serializedVersion: 2
+  m_Mass: 1.00000001e-07
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &6532578
 BoxCollider:
   m_ObjectHideFlags: 1
