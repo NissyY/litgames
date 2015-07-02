@@ -208,7 +208,9 @@ MonoBehaviour:
   GameStartBtn: {fileID: 1155551547}
   starFighterPrefab: {fileID: 124010, guid: c1f7a6b5bb6da564da7ea4329d73303e, type: 2}
   GameOverSet: {fileID: 654916141}
+  GameClearBtn: {fileID: 0}
   gameFlag: 0
+  clearFlag: 0
   flg: 0
 --- !u!1 &644800283
 GameObject:
@@ -227,7 +229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &644800284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,7 +262,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -270,7 +272,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: Time30
 --- !u!222 &644800286
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -293,7 +295,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 307.299988, y: 120}
+  m_AnchoredPosition: {x: 629.700012, y: 280.100006}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!1 &654916141 stripped
@@ -484,7 +486,7 @@ GameObject:
   - 114: {fileID: 988377664}
   - 114: {fileID: 988377663}
   m_Layer: 5
-  m_Name: Button
+  m_Name: GameClearButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

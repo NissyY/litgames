@@ -23,7 +23,8 @@ public class StarfighterControl : MonoBehaviour {
     void Start() {
         intervalTime = 0;
         enemyintervalTime = 0;
-    }	
+
+	}	
 
     void Update() {
 
@@ -35,8 +36,6 @@ public class StarfighterControl : MonoBehaviour {
         if (Input.GetKey("down")) {
             transform.Translate(0, 0, vertical * Z_Speed);
         }
-
-
         if (Input.GetKey("left")) {
             transform.Translate(horizontal * X_Speed, 0, 0);
         }
@@ -59,10 +58,11 @@ public class StarfighterControl : MonoBehaviour {
             enemyintervalTime = 0;
             Instantiate(EnemyObject, new Vector3(Random.Range(100.0f, 200.0f), transform.position.y, transform.position.z + 200), Quaternion.identity);
         }
+
 }
 	void OnTriggerEnter(Collider coll) {
-        if (coll.gameObject.tag == "EnemyBullet") {
-            Instantiate(Explosion, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+		if (coll.gameObject.tag == "EnemyBullet") {
+			Instantiate(Explosion, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
             Destroy(this.gameObject);
 			GameObject.Find("Main Camera").GetComponent<GameControl>().gameFlag = false;
 			GameObject.Find("Main Camera").GetComponent<GameControl>().flg = 0;

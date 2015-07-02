@@ -12,8 +12,9 @@ public class Bullet : MonoBehaviour {
         transform.Translate(0, 0, bulletSpeed);
 	}
 	void OnTriggerEnter(Collider coll) {
-		if (coll.gameObject.tag == "Enemy") {
-			Destroy(this.gameObject);
+		if ((coll.gameObject.tag == "Enemy") || (coll.gameObject.tag == "EnemyBullet")) {
+			Destroy (this.gameObject);
 		}
+
 	}
 }

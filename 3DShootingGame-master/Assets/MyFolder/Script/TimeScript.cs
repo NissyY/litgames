@@ -29,7 +29,7 @@ public class TimeScript: MonoBehaviour {
 		if (time < 0)
 			time = 0;
 		clearflg = 1;
-		GetComponent<Text> ().text = ((int)time).ToString ();
+		GetComponent<Text> ().text = "Time"+((int)time).ToString ();
 	}
 		IEnumerator GameClear() {
 			gameClearText.SetActive(true);

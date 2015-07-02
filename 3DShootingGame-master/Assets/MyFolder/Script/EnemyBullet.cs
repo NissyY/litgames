@@ -17,5 +17,8 @@ public class EnemyBullet : MonoBehaviour {
 		if (coll.gameObject.tag == "Player") {
 			Destroy(this.gameObject);
 		}
+		if(coll.gameObject.tag == "PlayerBullet"){
+			Destroy(this.gameObject);
+		}
 	}
 }
