@@ -2,17 +2,17 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class ScoreScrpt : MonoBehaviour {
-	
-	private int score = 0;
-	
-	void Start () {
+public class ScoreControl: MonoBehaviour {
 
-		GetComponent<Text>().text = "Score: " + score.ToString();
+	public int score;
+
+	void Start () {
+		score = 0;
+		GetComponent<Text> ().text = "Break Enemy : " + score.ToString ();
 	}
 
-	public void AddPoint (int point) {
-		score = score + point;
-		GetComponent<Text>().text = "Score: " + score.ToString();
+	void Updata(){
+		score = GameObject.Find ("Torch").GetComponent<Bullet> ().resultscore;
+		GetComponent<Text> ().text = "Break Enemy : " + score.ToString ();
 	}
 }

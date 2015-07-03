@@ -29,8 +29,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745f542ef492d4230a97a7053503ab60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 30
   ResetButton: {fileID: 177964, guid: 656345b72e083b240b39e036ea9841c7, type: 2}
   gameClearText: {fileID: 126138, guid: 97dfc413546554edd9cfd0e8a2d83910, type: 2}
+  gamecontrol: {fileID: 0}
+  clearflg: 0
 --- !u!114 &11499304
 MonoBehaviour:
   m_ObjectHideFlags: 1

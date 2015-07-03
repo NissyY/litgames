@@ -69,6 +69,7 @@ public class StarfighterControl : MonoBehaviour {
             Destroy(this.gameObject);
 			GameObject.Find("Main Camera").GetComponent<GameControl>().gameFlag = false;
 			GameObject.Find("Main Camera").GetComponent<GameControl>().flg = 0;
+
         }
     }
 

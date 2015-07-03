@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class TimeScript: MonoBehaviour {
-	public float time = 30;
+	public float time =  30;
 	public GameObject ResetButton;
 	public GameObject gameClearText;
 	public GameControl gamecontrol;
@@ -24,11 +24,13 @@ public class TimeScript: MonoBehaviour {
 		if (time < 0) {
 			StartCoroutine ("GameClear");
 		}
-	
+
 		//マイナスは表示しない
-		if (time < 0)
+		if (time < 0) {
 			time = 0;
-		clearflg = 1;
+			GameObject.Find ("Main Camera").GetComponent<GameControl> ().clearFlag = true;
+			clearflg = 1;
+		}
 		GetComponent<Text> ().text = "Time"+((int)time).ToString ();
 	}
 		IEnumerator GameClear() {
