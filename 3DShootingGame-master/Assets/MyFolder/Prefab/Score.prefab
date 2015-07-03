@@ -29,6 +29,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e641f8eb62c04344abab534ce5788b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
+  point:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 100
+    height: 100
 --- !u!114 &11472850
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -75,8 +82,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 150}
+  m_AnchoredPosition: {x: -193, y: 100}
+  m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000
 Prefab:

@@ -3,9 +3,10 @@ using System.Collections;
 
 public class EnemyControl : MonoBehaviour {
 
+	public ScoreControl scorecontrol;
     public GameObject EnemyBullet;
     public GameObject Explosion;
-	public int Score = 0;
+	public int addScore = 1;
     float Z_Speed = 0.7f;
     float intervalTime;
 
@@ -13,6 +14,7 @@ public class EnemyControl : MonoBehaviour {
 	void Start () {
         intervalTime = 0;
 		transform.Rotate (0, 180, 0);
+//		scorecontrol = GameObject.Find("ScoreControl").GetComponent<ScoreControl>().score;
 	}
 	void Update () {
         transform.Translate(0, 0, 1 * Z_Speed);
@@ -27,7 +29,7 @@ public class EnemyControl : MonoBehaviour {
         if (coll.gameObject.tag == "PlayerBullet") {
             Instantiate(Explosion, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
 			Destroy(this.gameObject);
-			Score++;
+//			scorecontrol = scorecontrol + addScore;
         }
     }
 }

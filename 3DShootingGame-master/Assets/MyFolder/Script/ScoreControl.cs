@@ -1,18 +1,22 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 
-public class ScoreControl: MonoBehaviour {
-
-	public int score;
-
+public class ScoreControl : MonoBehaviour {
+	
+	public int score = 0;
+	public Rect point = new Rect(0, 0, 100, 100);
 	void Start () {
 		score = 0;
-		GetComponent<Text> ().text = "Break Enemy : " + score.ToString ();
+	}
+
+	void OnGUI(){
+//		GUI.Label (point, "" + GameObject.Find("DroidFighter").GetComponent<EnemyControl>().scorecontrol);
 	}
 
 	void Updata(){
-		score = GameObject.Find ("Torch").GetComponent<Bullet> ().resultscore;
-		GetComponent<Text> ().text = "Break Enemy : " + score.ToString ();
+//		GameObject.Find("DroidFighter").GetComponent<EnemyControl>().scorecontrol;
+	}
+	public void AddScore (float addScore) {
+		//score += addScore;
 	}
 }
